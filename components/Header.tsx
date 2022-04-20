@@ -10,11 +10,11 @@ function Header() {
           className="cursor-pointer object-contain"
         />
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Home</li>
+          <li>TV Shows</li>
+          <li>Movies</li>
+          <li>New & Popular</li>
+          <li>My List</li>
         </ul>
       </div>
       <div></div>
