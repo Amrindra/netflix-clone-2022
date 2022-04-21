@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* think of "base" as html, body, heading */
+@layer base {
+  body {
+    @apply bg-[#141414];
+  }
+}
+
+/* Think of components as custom className */
 @layer components {
   .header-link {
-    color: red;
+    @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[4s] hover:text-[#b3b3b3];
   }
 }
