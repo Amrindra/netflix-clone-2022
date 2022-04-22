@@ -63,14 +63,14 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      netflixOriginals: netflixOriginals.results,
-      trendingNow: trendingNow.results,
-      topRated: topRated.results,
-      actionMovies: actionMovies.results,
-      comedyMovies: comedyMovies.results,
-      horrorMovies: horrorMovies.results,
-      romanceMovies: romanceMovies.results,
-      documentaries: documentaries.results,
+      netflixOriginals: netflixOriginals.results ? netflixOriginals : null,
+      trendingNow: trendingNow.results ? trendingNow : null,
+      topRated: topRated.results ? topRated : null,
+      actionMovies: actionMovies.results ? actionMovies : null,
+      comedyMovies: comedyMovies.results ? comedyMovies : null,
+      horrorMovies: horrorMovies.results ? horrorMovies : null,
+      romanceMovies: romanceMovies.results ? romanceMovies : null,
+      documentaries: documentaries.results ? documentaries : null,
     },
   };
 };
