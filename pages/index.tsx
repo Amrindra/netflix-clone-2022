@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Banner from '../components/Banner';
 import Header from '../components/Header';
 import { Movie } from '../typings';
 import requests from '../utils/requests';
@@ -34,6 +35,10 @@ const Home = ({
       </Head>
 
       <Header />
+      <main>
+        {/* we cannot do the server side redering of the component, we can only do in pages. so we have to pass api data as props  */}
+        <Banner netflixOriginals={netflixOriginals} />
+      </main>
     </div>
   );
 };
@@ -63,14 +68,27 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      netflixOriginals: netflixOriginals.results ? netflixOriginals : null,
-      trendingNow: trendingNow.results ? trendingNow : null,
-      topRated: topRated.results ? topRated : null,
-      actionMovies: actionMovies.results ? actionMovies : null,
-      comedyMovies: comedyMovies.results ? comedyMovies : null,
-      horrorMovies: horrorMovies.results ? horrorMovies : null,
-      romanceMovies: romanceMovies.results ? romanceMovies : null,
-      documentaries: documentaries.results ? documentaries : null,
+      netflixOriginals: netflixOriginals.results,
+      trendingNow: trendingNow.results,
+      topRated: topRated.results,
+      actionMovies: actionMovies.results,
+      comedyMovies: comedyMovies.results,
+      horrorMovies: horrorMovies.results,
+      romanceMovies: romanceMovies.results,
+      documentaries: documentaries.results,
     },
   };
 };
+
+// return {
+//   props: {
+//     netflixOriginals: netflixOriginals.results ? netflixOriginals : null,
+//     trendingNow: trendingNow.results ? trendingNow : null,
+//     topRated: topRated.results ? topRated : null,
+//     actionMovies: actionMovies.results ? actionMovies : null,
+//     comedyMovies: comedyMovies.results ? comedyMovies : null,
+//     horrorMovies: horrorMovies.results ? horrorMovies : null,
+//     romanceMovies: romanceMovies.results ? romanceMovies : null,
+//     documentaries: documentaries.results ? documentaries : null,
+//   },
+// };

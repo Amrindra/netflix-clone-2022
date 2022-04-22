@@ -1,9 +1,11 @@
-function Banner() {
-  return (
-      <div>
-          login
-      </div>
-  )
+import { Movie } from '../typings';
+
+interface Props {
+  netflixOriginals: Movie[];
 }
 
-export default Banner
+function Banner({ netflixOriginals }: Props) {
+  return <div>Banner</div>;
+}
+
+export default Banner;
