@@ -5,11 +5,11 @@ import { FaPlay } from 'react-icons/all';
 import { baseUrl } from '../constants/movie';
 import { Movie } from '../typings';
 
-interface Props {
+interface bannerProps {
   netflixOriginals: Movie[];
 }
 
-function Banner({ netflixOriginals }: Props) {
+function Banner({ netflixOriginals }: bannerProps) {
   const [movie, setMovie] = useState<Movie | null>(null);
 
   useEffect(() => {
