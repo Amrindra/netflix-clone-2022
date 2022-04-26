@@ -25,8 +25,8 @@ function Banner({ netflixOriginals }: Props) {
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
         <Image
-          layout="fill"
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
+          layout="fill"
           objectFit="cover"
         />
       </div>
@@ -44,13 +44,7 @@ function Banner({ netflixOriginals }: Props) {
           Play
         </button>
 
-        <button
-          className="bannerButton bg-[gray]/70"
-          // onClick={() => {
-          //   setCurrentMovie(movie)
-          //   setShowModal(true)
-          // }}
-        >
+        <button className="bannerButton bg-[gray]/70">
           <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8" /> More Info
         </button>
       </div>
