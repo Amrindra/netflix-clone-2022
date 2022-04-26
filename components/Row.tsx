@@ -1,6 +1,6 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
 import { Movie } from '../typings';
-import Thumbnails from './Thumbnails';
+import Thumbnail from './Thumbnails';
 
 interface rowProps {
   title: string;
@@ -24,8 +24,7 @@ function Row({ title, movies }: rowProps) {
           // ref={rowRef}
         >
           {movies.map((movie) => (
-            // <Thumbnails key={movie.id} movie={movie} />
-            <Thumbnails />
+            <Thumbnail key={movie.id} movie={movie} />
           ))}
         </div>
         <ChevronRightIcon

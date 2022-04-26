@@ -1,7 +1,7 @@
 import { InformationCircleIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { FaPlay } from 'react-icons/all';
+import { FaPlay } from 'react-icons/fa';
 import { baseUrl } from '../constants/movie';
 import { Movie } from '../typings';
 
