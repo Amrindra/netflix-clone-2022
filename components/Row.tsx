@@ -10,10 +10,13 @@ interface rowProps {
 
 function Row({ title, movies }: rowProps) {
   const rowRef = useRef<HTMLDivElement>(null);
+  //Setting usestate for arrow to hold state
   const [isMoved, setIsMoved] = useState(false);
 
+  //Get direction left or right parameter from handleclick function to set move direction when it clicks then we set state to true
   const handleClick = (direction: string) => {
     setIsMoved(true);
+    //Get the current object from the reference.Reference is the entire row that shows on the screen
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
 
@@ -24,6 +27,8 @@ function Row({ title, movies }: rowProps) {
       rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
   };
+
+  // console.log(rowRef.current!.scrollLeft, rowRef.current!.clientWidth);
 
   return (
     <div className="h-40 space-y-0.5 md:space-y-2">
