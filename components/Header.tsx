@@ -29,6 +29,7 @@ function Header() {
     //when we scroll the addEventListener function will be triggered and change the background color
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
+        
         <img
           src="https://rb.gy/ulxxee"
           width={100}
