@@ -22,6 +22,13 @@ function Login() {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     console.log(data);
+
+    //check if a user clicks on sign in button then sign them in, but a user clicks on sign up then bring them to sign up page
+    if (login) {
+      await signIn(data.email, data.password);
+    } else {
+      await signUp(data.email, data.password);
+    }
   };
 
   return (
