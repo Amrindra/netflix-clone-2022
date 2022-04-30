@@ -1,10 +1,11 @@
 import { BellIcon, SearchIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import useAuth from '../hooks/useAuth';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const {} = useAuth();
   // When component is mount is when the UI show on screen
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +30,6 @@ function Header() {
     //when we scroll the addEventListener function will be triggered and change the background color
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        
         <img
           src="https://rb.gy/ulxxee"
           width={100}
